@@ -25,7 +25,7 @@ void loop()
     Serial.println(reading);
     Serial.print(4.9 * reading);
     Serial.println("mV");
-    Serial.print((reading / 1024) * 100);
+    Serial.print((reading / 1023) * 100);
     Serial.println("%");
 
     if ((millis() - changeTime) > ledDelay) // if it has been ledDelay ms since last change
